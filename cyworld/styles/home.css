@@ -57,8 +57,8 @@ body {
     height: 270px;
 }
 
-.body_contents_body {
-    width: 464px;
+.video {
+    width: 100%;
     height: 240px;
     margin-top: 10px;
 

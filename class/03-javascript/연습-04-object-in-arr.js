@@ -11,3 +11,4 @@ classmates.length;
 classmates[0].school;
 // '다람쥐 초등학교'
 classmates[2].age;
+classmates.concat;
