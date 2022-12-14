@@ -22,7 +22,7 @@
       <div class="game_subtitle">제시어 : <span id="word">코드캠프</span></div>
       <div class="word_text">
         <input class="text_box" id="myword" placeholder="단어를 입력하세요">
-        <button class="search">검색</button>
+        <button class="search" onclick='followUp()'>검색</button>
       </div>
       <div class="word_result" id="result">결과!</div>
     </div>
@@ -31,14 +31,15 @@
       <div class="game_title">LOTTO</div>
       <div class="game_subtitle">버튼을 누르세요.</div>
       <div class="numbers_box">
-        <div class="number">3</div>
-        <div class="number">5</div>
-        <div class="number">10</div>
-        <div class="number">24</div>
-        <div class="number">30</div>
-        <div class="number">34</div>
+        <div class="number"> <span id="own">3</span></div>
+        <div class="number"> <span id="two">5</span></div>
+        <div class="number"> <span id="three">10</span></div>
+        <div class="number"> <span id="four">24</span></div>
+        <div class="number"> <span id="five">30</span></div>
+        <div class="number"> <span id="six">34</span></div>
+
       </div>
-      <button class="button">Button</button>
+      <button class="button" onclick="lotto()">Button</button>
     </div>
   </div>
 </body>
