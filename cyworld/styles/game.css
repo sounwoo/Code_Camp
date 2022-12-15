@@ -106,11 +106,14 @@ img {
 .numbers_box {
     width: 130px;
     height: 21px;
+
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 10px;
+    padding: 5px 8px;
+    margin-top: 10px;
+    margin-bottom: 11px;
 
     background-color: #ffe400;
     border: 1px solid #000000;

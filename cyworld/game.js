@@ -11,7 +11,7 @@ const followUp = () => {
         document.getElementById('word').innerText = myword;
         document.getElementById('myword').value = '';
     } else {
-        document.getElementById('result').innerText = '오답 입니다.';
+        document.getElementById('result').innerText = '땡!';
         document.getElementById('myword').value = '';
     }
 };
