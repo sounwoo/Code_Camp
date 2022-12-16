@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>final</title>
+    <link href="./final.css" rel="stylesheet">
+    <script src="./final.js"></script>
+</head>
+
+<body>
+    <div class="warpper">
+        <div class="signup">
+            <div class="title">코트캠프 회원가입</div>
+            <div class="cheking">
+                <input class="email" type="text" placeholder="이메일을 입력해주세요" id="email">
+                <div class="checking" id="email_checking"></div>
+            </div>
+            <div class="cheking">
+                <input class="name" type="text" placeholder="이름을 입력해주세요" id="name">
+                <div class="checking" id="name_checking"></div>
+            </div>
+            <div class="cheking">
+                <input class="pw1" type="password" placeholder="비밀번호를 입력해주세요" id="pw1">
+                <div class="checking" id="pw1_checking"></div>
+            </div>
+            <div class="cheking">
+                <input class="pw2" type="password" placeholder="비밀번호를 다시 입력해주세요" id="pw2">
+                <div class="checking" id="pw2_checking"></div>
+            </div>
+            <div class="phone_number">
+                <input type="text" id="p1" class="ph1" oninput="changeFocus1()" maxlength="3"> ㅡ </input>
+                <input type="text" id="p2" class="ph2" oninput="changeFocus2()" maxlength="4"> ㅡ </input>
+                <input type="text" id="p3" class="ph3" maxlength="4" oninput="send()"></input>
+            </div>
+            <div class="auth">
+                <div class="auth_number" id="auth_number">000000</div>
+                <button class="auth_send" id="auth_send" disabled="true" onclick="timer()"> 인증번호 전송</button>
+            </div>
+            <div class="timer">
+                <div class="timer_time" id="timer_time">3:00</div>
+                <button class="timer_send" id="timer_send" disabled="true" onclick="check()"> 인증확인 </button>
+            </div>
+            <div class="checking">
+                <select class="region__select" id="region">
+                    <option disabled="true" selected="true" id="region">지역을 선택하세요</option>
+                    <option>서울</option>
+                    <option>경기</option>
+                    <option>광주</option>
+                </select>
+                <div class="checking" id="region_checking"></div>
+            </div>
+
+
+            <div class='box1'>
+                <div class="gender_w"><input class="radio1" type='radio' name="gender"> 여성</div>
+                <div class="gender-m"><input class="radio2" type='radio' name="gender"> 남성</div>
+            </div>
+            <div class="checking" id="gender_checking"></div>
+            <div class="divideLine"></div>
+
+            <button class='send_button' id='send_button' disabled="true" oninput="check()" onclick="checking()">
+                가입하기</button>
+        </div>
+
+    </div>
+</body>
+
+</html>
