@@ -1,0 +1,137 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+.container {
+    background: #eeeeee;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    padding: 50px 0px;
+}
+
+.wrapper {
+    width: 620px;
+    background-color: white;
+
+    padding: 40px 30px;
+    border-radius: 10px;
+}
+
+.wrapper__header {
+    border-bottom: 1px dashed gray;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.wrapper__header__title {
+    font-size: 32px;
+    background-color: orange;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.wrapper__header__sub-title {
+    font-size: 18px;
+    padding: 10px 0px;
+}
+
+#point {
+    display: block;
+    margin-top: 10px;
+    font-size: 22px;
+    font-weight: 700;
+    text-decoration: underline;
+    display: block;
+    color: orange;
+}
+
+.wrapper__body {
+    border: 1px solid #dddddd;
+    padding: 20px 30px;
+}
+
+.wrapper__body__content {
+    width: 100%;
+    height: 180px;
+
+    padding: 10px;
+    border: 1px solid #00ff0000;
+}
+
+.wrapper__body__title {
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #f4f4f4f4;
+    margin-bottom: 20px;
+}
+
+.wrapper__body__content #food {
+    color: red;
+    font-weight: 700;
+}
+
+.wrapper__body__content #feel {
+    color: blue;
+    font-size: 20px;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.day {
+    font-size: 14px;
+    color: #91919191;
+    text-align: right;
+}
+
+.header {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid gray;
+}
+
+.header-inner {
+    width: 900px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 100px;
+}
+
+.logo h1 a {
+    color: orange;
+    text-decoration: none;
+}
+
+.menu__ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.menu__ul li a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: black;
+}
+
+.menu__ul li {
+    list-style: none;
+}
+
+.user {
+    width: 100px;
+}
