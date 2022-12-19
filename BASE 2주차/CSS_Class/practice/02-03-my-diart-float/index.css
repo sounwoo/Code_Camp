@@ -134,7 +134,7 @@
     text-decoration: none;
     padding: 29px 20px;
 }
-
+/* 마우스 화면 감지 */
 .menu__ul li a:hover {
     color: orange;
 }
