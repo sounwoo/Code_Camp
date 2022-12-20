@@ -1,0 +1,15 @@
+* {
+    box-sizing: border-box;
+}
+
+.btn1:active {
+    background-color: red;
+}
+
+.input1:focus {
+    background: green;
+}
+
+.link1:visited {
+    color: red;
+}

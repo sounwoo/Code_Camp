@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    width: 500px;
+    height: 500px;
+    background-color: red;
+    border: 1px solid blue;
+
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container div {
+    width: 130px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.white1,
+.white2 {
+    color: black;
+    background-color: white;
+}
+
+.Yellow {
+    color: red;
+    background-color: yellow;
+}
+
+.Green {
+    color: white;
+    background-color: green;
+}
+
+.white2 {
+    order: 1;
+}
