@@ -1,0 +1,15 @@
+* {
+    background-color: yellow;
+}
+
+div {
+    background-color: aqua;
+}
+
+.text {
+    background-color: blue;
+}
+
+#id {
+    background-color: red;
+}
