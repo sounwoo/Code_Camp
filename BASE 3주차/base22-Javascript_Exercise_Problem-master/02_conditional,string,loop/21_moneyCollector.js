@@ -12,10 +12,17 @@
     반복문을 사용해야 합니다
 */
 
-
 function moneyCollector(str) {
     // 여기에 코드를 작성하세요
-    
+    let result = str.includes('$');
+    let split = str.split('');
+    for (let i = 0; i < split.length; i++) {
+        if (result === true) {
+            return split.indexOf('$');
+        } else {
+            return '찾을 수 없음';
+        }
+    }
 }
 
 module.exports = moneyCollector;

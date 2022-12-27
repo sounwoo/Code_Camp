@@ -10,10 +10,15 @@
 
 */
 
-
 function finder(str, op) {
     // 여기에 코드를 작성하세요
-    
+    let count = 0;
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] === op) {
+            count++;
+        }
+    }
+    return count;
 }
 
 module.exports = finder;

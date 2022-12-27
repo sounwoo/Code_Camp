@@ -14,11 +14,21 @@
 
 */
 
-
 function rating(num) {
     // 여기에 코드를 작성하세요
-
+    if (num > 100 || num < 0) {
+        return '잘못된 입력입니다';
+    } else if (num >= 90) {
+        return 'A등급';
+    } else if (num >= 80) {
+        return 'B등급';
+    } else if (num >= 70) {
+        return 'C등급';
+    } else if (num >= 60) {
+        return 'D등급';
+    } else {
+        return '등급 미달';
+    }
 }
-
 
 module.exports = rating;

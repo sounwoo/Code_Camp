@@ -6,10 +6,10 @@
 
 */
 
-
 function avrLength(str1, str2) {
     // 여기에 코드를 작성하세요
-    
+    let result = (str1.length + str2.length) / 2;
+    return result;
 }
 
 module.exports = avrLength;

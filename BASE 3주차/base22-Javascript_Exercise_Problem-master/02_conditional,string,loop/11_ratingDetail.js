@@ -24,11 +24,53 @@
            100점 => A+
 */
 
-
 function ratingDetail(num) {
     // 여기에 코드를 작성하세요
+    let sum = num % 10;
 
+    if (sum >= 7) {
+        if (num > 100 || num < 0) {
+            return '잘못된 입력입니다';
+        } else if (num >= 90) {
+            return 'A+';
+        } else if (num >= 80) {
+            return 'B+';
+        } else if (num >= 70) {
+            return 'C+';
+        } else if (num >= 60) {
+            return 'D+';
+        } else {
+            return '등급 미달';
+        }
+    } else if (3 >= sum) {
+        if (num > 100 || num < 0) {
+            return '잘못된 입력입니다';
+        } else if (num >= 90) {
+            return 'A-';
+        } else if (num >= 80) {
+            return 'B-';
+        } else if (num >= 70) {
+            return 'C-';
+        } else if (num >= 60) {
+            return 'D-';
+        } else {
+            return '등급 미달';
+        }
+    } else {
+        if (num > 100 || num < 0) {
+            return '잘못된 입력입니다';
+        } else if (num >= 90) {
+            return 'A';
+        } else if (num >= 80) {
+            return 'B';
+        } else if (num >= 70) {
+            return 'C';
+        } else if (num >= 60) {
+            return 'D';
+        } else {
+            return '등급 미달';
+        }
+    }
 }
-
 
 module.exports = ratingDetail;

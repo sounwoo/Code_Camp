@@ -12,10 +12,16 @@
 
 */
 
-
 function ageFilter(age) {
     // 여기에 코드를 작성하세요
-    
+
+    if (20 <= age) {
+        return '성인';
+    } else if (8 <= age) {
+        return '학생';
+    } else {
+        return '어린이';
+    }
 }
 
 module.exports = ageFilter;

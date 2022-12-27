@@ -12,10 +12,13 @@
 
 */
 
-
 function levelFilter(level) {
     // 여기에 코드를 작성하세요
-    
+    if (level >= 30) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 module.exports = levelFilter;

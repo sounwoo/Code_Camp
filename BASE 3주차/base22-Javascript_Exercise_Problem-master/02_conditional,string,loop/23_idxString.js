@@ -11,10 +11,20 @@
 
 */
 
-
 function idxString(num) {
     // 여기에 코드를 작성하세요
+    let array = [];
+    if (num >= 0) {
+        for (let i = 0; i <= num; i++) {
+            array.push(i);
+        }
+    } else {
+        for (let i = 0; i <= Math.abs(num); i++) {
+            array.push(-i);
+        }
+    }
 
+    return array.join('');
 }
 
 module.exports = idxString;

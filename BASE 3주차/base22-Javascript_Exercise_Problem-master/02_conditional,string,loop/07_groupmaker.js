@@ -11,9 +11,20 @@
 
 */
 
-
 function groupMaker(num) {
     // 여기에 코드를 작성하세요
+    let one = num % 3;
+    let two = num % 5;
+
+    if (one === 0 && two === 0) {
+        return 'AB그룹';
+    } else if (one !== 0 && two !== 0) {
+        return 'C그룹';
+    } else if (one === 0) {
+        return 'A그룹';
+    } else if (two === 0) {
+        return 'B그룹';
+    }
 }
 
 module.exports = groupMaker;

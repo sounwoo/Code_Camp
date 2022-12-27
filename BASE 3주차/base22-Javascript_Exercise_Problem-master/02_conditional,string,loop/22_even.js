@@ -16,9 +16,16 @@
 
 */
 
-
 function even(num) {
     // 여기에 코드를 작성하세요
+    while (true) {
+        num = num - 2;
+        if (num === 1) {
+            return false;
+        } else {
+            return true;
+        }
+    }
 }
 
 module.exports = even;
