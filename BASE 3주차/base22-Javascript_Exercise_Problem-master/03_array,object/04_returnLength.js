@@ -8,10 +8,14 @@
     
 */
 
-
 function returnLength(arr) {
     // 여기에 코드를 작성하세요
-    
+    // let count = 0;
+    // for (let i = 0; i <= arr.indexOf(arr.slice(-1)[0]); i++) {
+    //     count++;
+    // }
+    // console.log(count);
+    // return count;
 }
 
 module.exports = returnLength;

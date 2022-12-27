@@ -21,10 +21,19 @@
     
 */
 
-
 function seatNumber(row, col) {
     // 여기에 코드를 작성하세요
-    
+    // let arr = [];
+    // let arr1 = [];
+    // let count = 0;
+    // for (let i = 1; i <= col * row; i++) {
+    //     arr.push(i);
+    // }
+    // for (let i = 0; i < row; i++) {
+    //     arr1.push(arr.splice(count, col));
+    // }
+    // console.log(arr1);
+    // return arr1;
 }
 
 module.exports = seatNumber;

@@ -26,10 +26,15 @@
     
 */
 
-
 function wordFinder(str) {
     // 여기에 코드를 작성하세요
-    
+    // let reg = /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gim;
+    // let word = str.replace(reg, '');
+    // word = word.toLowerCase().split(' ');
+    // return word.reduce((x, y) => {
+    //     x[y] = (x[y] || 0) + 1;
+    //     return x;
+    // }, {});
 }
 
 module.exports = wordFinder;

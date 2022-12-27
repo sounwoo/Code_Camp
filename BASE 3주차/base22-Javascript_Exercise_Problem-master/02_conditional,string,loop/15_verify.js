@@ -10,7 +10,6 @@
 
 function verify(id, password) {
     // 여기에 코드를 작성하세요
-    console.log(password.includes('!'));
     if (id.length >= 4 && password.length >= 8 && password.includes('!') === true) {
         return true;
     } else {

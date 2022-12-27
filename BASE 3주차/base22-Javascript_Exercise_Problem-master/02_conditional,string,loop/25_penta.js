@@ -12,13 +12,13 @@
 
 function penta(num) {
     // 여기에 코드를 작성하세요
-    let sum;
-    let arr = [];
-    for (let i = 1; i <= Math.floor(num / 5); i++) {
-        sum = i * 5;
-        arr.push(sum);
-    }
-    return arr.join('');
+    // let sum;
+    // let arr = [];
+    // for (let i = 1; i <= Math.floor(num / 5); i++) {
+    //     sum = i * 5;
+    //     arr.push(sum);
+    // }
+    // return arr.join('');
 }
 
 module.exports = penta;

@@ -11,10 +11,15 @@
 
 */
 
-
 function cutLastIdx(arr) {
     // 여기에 코드를 작성하세요
-    
+    // let list = [arr];
+    // let list2 = [];
+    // for (let i = 0; i < arr.length - 1; i++) {
+    //     list2.push(arr[i]);
+    // }
+    // list.push(list2);
+    // return list;
 }
 
 module.exports = cutLastIdx;

@@ -25,10 +25,15 @@
 
 */
 
-
 function school(arr) {
     // 여기에 코드를 작성하세요
-    
+    // let result = [];
+    // for (let i = 0; i < arr.length; i++) {
+    //     if (arr[i].school === '코드초등학교') {
+    //         result.push(arr[i].name);
+    //     }
+    // }
+    // return result;
 }
 
 module.exports = school;

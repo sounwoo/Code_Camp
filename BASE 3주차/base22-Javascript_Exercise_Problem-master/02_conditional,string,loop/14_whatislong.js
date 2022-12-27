@@ -9,17 +9,27 @@
 
 function whatIsLong(str1, str2, str3) {
     // 여기에 코드를 작성하세요
-    let array1 = [str1.length, str2.length, str3.length];
-    let array2 = [str1, str2, str3];
-    let index = [];
+    // let array1 = [str1.length, str2.length, str3.length];
+    // let array2 = [str1, str2, str3];
+    // let index = [];
 
-    for (let i = 0; i < 3; i++) {
-        if (Math.max(...array1) === array1[i]) {
-            index.push(array2[i]);
+    // for (let i = 0; i < array2.length; i++) {
+    //     if (Math.max(...array1) === array1[i]) {
+    //         index.push(array2[i]);
+    //     }
+    // }
+
+    // return index.slice(-1)[0];
+
+    let arr = [str1, str2, str3];
+    let last = '';
+    for (let i = 0; i < arr.length; i++) {
+        if (last.length <= arr[i].length) {
+            last = arr[i];
         }
     }
 
-    return index.slice(-1)[0];
+    return last;
 }
 
 module.exports = whatIsLong;

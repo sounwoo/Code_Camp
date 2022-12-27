@@ -26,10 +26,15 @@
 
 */
 
-
 function baseball(arr) {
     // 여기에 코드를 작성하세요
-    
+    // let result = [];
+    // for (let i = 0; i < arr.length; i++) {
+    //     if (arr[i].team === '코드어벤저스' && arr[i].part === '야구') {
+    //         result.push(arr[i].name);
+    //     }
+    // }
+    // return result.length;
 }
 
 module.exports = baseball;
