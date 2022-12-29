@@ -20,13 +20,13 @@
 
 function league(str) {
     // 여기에 코드를 작성하세요
-    // let arr = [];
-    // for (let i = 0; i < str.length; i++) {
-    //     for (let j = 0; j < str.length; j++) {
-    //         arr.push(str[i] + str[j]);
-    //     }
-    // }
-    // return arr;
+    let arr = [];
+    for (let i = 0; i < str.length; i++) {
+        for (let j = 0; j < str.length; j++) {
+            arr.push(str[i] + str[j]);
+        }
+    }
+    return arr;
 }
 
 module.exports = league;

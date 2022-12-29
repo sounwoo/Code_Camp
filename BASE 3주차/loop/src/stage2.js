@@ -41,6 +41,5 @@ export const designateGrade = function (students) {
     for (let i = 0; i < score.length; i++) {
         gradeArr[i] = { name: score[i].name, grade: grade[i] };
     }
-
     return gradeArr;
 };

@@ -40,5 +40,6 @@ export const calculateAverage = function (students) {
         subjectTotal = subjectTotalArr[i] / subject.length;
         scoreAverage[i] = { name: students[i].name, score: subjectTotal };
     }
+    console.log(scoreAverage);
     return scoreAverage;
 };
