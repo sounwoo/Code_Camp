@@ -60,63 +60,35 @@ const createTree = function (folder, node) {
         // folder 프로퍼티가 존재 할 때 (recursive case)
         const newDetails = document.createElement('details');
         const newSummary = document.createElement('summary');
+
         if (folder[i].folder) {
             newSummary.textContent = folder[i].name;
-            newDetails.appendChild(newSummary);
-            container.appendChild(newDetails);
+            newDetails.prepend(newSummary);
+            container.prepend(newDetails);
             for (let j = 0; j < folder[i].file.length; j++) {
                 const newFile = document.createElement('li');
                 newFile.innerText = folder[i].file[j];
-                newDetails.appendChild(newFile);
+                newDetails.prepend(newFile);
             }
 
-            node.append(newDetails);
+            node.prepend(newDetails);
             createTree(folder[i].folder, newDetails);
         }
-
         if (!folder[i].folder) {
             // folder 프로퍼티가 없을 때 (base case)
             newSummary.textContent = folder[i].name;
-            newDetails.appendChild(newSummary);
-            container.append(newDetails);
+            newDetails.prepend(newSummary);
+            container.prepend(newDetails);
             for (let j = 0; j < folder[i].file.length; j++) {
                 const newFile = document.createElement('li');
                 newFile.innerText = folder[i].file[j];
-                newDetails.appendChild(newFile);
+                newDetails.prepend(newFile);
             }
-            node.append(newDetails);
+            node.prepend(newDetails);
         }
-        // container.replaceWith(container.lastChild);
     }
 };
 
 // ! 아래의 코드는 수정하지 마세요 ! //
 
 createTree(folderTemplate, container);
-
-// const newDetails = document.createElement('details');
-// const newSummary = document.createElement('summary');
-// for (let i = 0; i < folder.length; i++) {
-//     newSummary.innerText = folder[0].name;
-//     newDetails.appendChild(newSummary);
-// }
-
-// // forder name
-// for (let i = 0; i < folder[0].folder.length; i++) {
-//     const newFolder = document.createElement('summary');
-//     newFolder.innerText = folder[0].folder[i].name;
-//     newDetails.appendChild(newFolder);
-//     // folderIndex++;
-// }
-
-// 마지막 file name
-// let fileIndex = 0;
-// for (let i = 0; i < folder[0].file.length; i++) {
-//     const newFile = document.createElement('li');
-//     newFile.innerText = folder[fileIndex].file[i];
-//     newDetails.appendChild(newFile);
-//     // fileIndex++
-// }
-// container.appendChild(newDetails);
-// console.log(folder);
-// console.log(node);

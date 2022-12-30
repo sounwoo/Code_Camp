@@ -1,6 +1,7 @@
 const todoInput = document.querySelector('#todo-input');
 const todoList = document.querySelector('#todo-list');
 const savedTodoList = JSON.parse(localStorage.getItem('save-items'));
+const savedWeatherData = JSON.parse(localStorage.getItem('saved-weather'));
 
 const createTodo = (storageData) => {
     let todoContents = todoInput.value;
@@ -11,7 +12,6 @@ const createTodo = (storageData) => {
     const newLi = document.createElement('li');
     const newSpan = document.createElement('span');
     const newBtn = document.createElement('button');
-    console.log(newLi);
     newBtn.addEventListener('click', (event) => {
         newLi.classList.toggle('complete');
         saveItemsFn();
@@ -34,7 +34,7 @@ const createTodo = (storageData) => {
 };
 
 const keyCodeCheck = () => {
-    if (window.event.keyCode === 13 && todoInput.value !== '') {
+    if (window.event.keyCode === 13 && todoInput.value.trim() !== '') {
         createTodo();
     }
 };
@@ -68,3 +68,64 @@ if (savedTodoList) {
         createTodo(savedTodoList[i]);
     }
 }
+
+const weatherDataActive = ({ location, weather }) => {
+    const weatherMainList = [
+        'Clear',
+        'Clouds',
+        'Drizzle',
+        'Rain',
+        'Snow',
+        'Thunderstorm',
+    ];
+
+    weather = weatherMainList.includes(weather) ? weather : 'Fog';
+    const locationNameTag = document.querySelector('#location-name-tag');
+
+    locationNameTag.textContent = location;
+    document.body.style.backgroundImage = `url(./images/${weather}.jpg)`;
+
+    if (
+        !savedWeatherData ||
+        savedWeatherData.location !== location ||
+        savedWeatherData.weather !== weather
+    ) {
+        localStorage.setItem('saved-weather', JSON.stringify({ location, weather }));
+    }
+};
+
+const weatherSearch = ({ latitude, longitude }) => {
+    fetch(
+        `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=e6972d059e9ad66dbd18b9b5403f8500`
+    )
+        .then((res) => {
+            return res.json();
+        })
+        .then((json) => {
+            const weatherData = {
+                location: json.name,
+                weather: json.weather[0].main,
+            };
+            weatherDataActive(weatherData);
+        })
+        .catch((err) => {
+            console.error(err);
+        });
+};
+
+const accesToGeo = ({ coords }) => {
+    const { latitude, longitude } = coords;
+    // Shorthand property
+    const positionObj = {
+        latitude,
+        longitude,
+    };
+    weatherSearch(positionObj);
+};
+
+const askForLocation = () => {
+    navigator.geolocation.getCurrentPosition(accesToGeo, (err) => {
+        console.log(err);
+    });
+};
+askForLocation();

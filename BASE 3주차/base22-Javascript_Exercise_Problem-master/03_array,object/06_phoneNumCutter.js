@@ -12,12 +12,12 @@
 
 function phoneNumCutter(arr) {
     // 여기에 코드를 작성하세요
-    // let list = [];
-    // for (let i = 0; i < arr.length; i++) {
-    //     let phon = arr[i].split('').slice(0, 3) + '****' + arr[i].split('').slice(7);
-    //     list.push(phon.split(',').join(''));
-    // }
-    // return list;
+    let list = [];
+    for (let i = 0; i < arr.length; i++) {
+        let phon = arr[i].split('').slice(0, 3) + '****' + arr[i].split('').slice(7);
+        list.push(phon.split(',').join(''));
+    }
+    return list;
 }
 
 module.exports = phoneNumCutter;

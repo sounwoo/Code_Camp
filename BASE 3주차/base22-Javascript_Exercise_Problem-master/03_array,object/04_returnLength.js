@@ -14,8 +14,8 @@ function returnLength(arr) {
     // for (let i = 0; i <= arr.indexOf(arr.slice(-1)[0]); i++) {
     //     count++;
     // }
-    // console.log(count);
-    // return count;
+
+    return arr.indexOf(arr.slice(-1)[0]) + 1;
 }
 
 module.exports = returnLength;

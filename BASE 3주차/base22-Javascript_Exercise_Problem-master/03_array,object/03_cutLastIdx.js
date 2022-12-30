@@ -13,6 +13,10 @@
 
 function cutLastIdx(arr) {
     // 여기에 코드를 작성하세요
+    let list1 = [arr];
+    list1.push([...arr.slice(0, -1)]);
+    return list1;
+
     // let list = [arr];
     // let list2 = [];
     // for (let i = 0; i < arr.length - 1; i++) {

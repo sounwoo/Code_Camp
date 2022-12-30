@@ -18,22 +18,21 @@
 
     각 행(row)를 배열로 감싸고, 전체를 배열로 한번 더 감싸 아래와 같이 리턴하여야 합니다.
     [[1, 2, 3, 4, 5], [6, 7, 8, 9, 10], [11, 12, 13, 14, 15]]
-    
+
 */
 
 function seatNumber(row, col) {
     // 여기에 코드를 작성하세요
-    // let arr = [];
-    // let arr1 = [];
-    // let count = 0;
-    // for (let i = 1; i <= col * row; i++) {
-    //     arr.push(i);
-    // }
-    // for (let i = 0; i < row; i++) {
-    //     arr1.push(arr.splice(count, col));
-    // }
-    // console.log(arr1);
-    // return arr1;
+    let arr = [];
+    let arr1 = [];
+    let count = 0;
+    for (let i = 1; i <= col * row; i++) {
+        arr.push(i);
+    }
+    for (let i = 0; i < row; i++) {
+        arr1.push(arr.splice(count, col));
+    }
+    return arr1;
 }
 
 module.exports = seatNumber;

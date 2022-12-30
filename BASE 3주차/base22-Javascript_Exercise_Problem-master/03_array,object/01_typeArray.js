@@ -19,15 +19,15 @@
 
 function typeArray(arr) {
     // 여기에 코드를 작성하세요
-    // let list = [];
-    // for (let i = 0; i < arr.length; i++) {
-    //     if (Array.isArray(arr[i]) === true) {
-    //         list.push('array');
-    //     } else {
-    //         list.push(typeof arr[i]);
-    //     }
-    // }
-    // return list;
+    let list = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (Array.isArray(arr[i]) === true) {
+            list.push('array');
+        } else {
+            list.push(typeof arr[i]);
+        }
+    }
+    return list;
 }
 
 module.exports = typeArray;
